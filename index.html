@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="magnific-popup.css">
+    <link rel="stylesheet" href="jquery.exzoom.css">
+    <title>Document</title>
+    <style>
+        #button {
+            cursor: pointer;
+        }
+        .product-carousel {
+            width: 500px;
+        }
+        .part {
+            display: flex;
+            column-gap: 20px;
+            flex-direction: row;
+        }
+        .inner {
+            background-color: aquamarine;
+            margin: 10px;
+            padding: 15px;
+            position: relative;
+        }
+        .inner::before{
+            position: absolute;
+            content: '';
+            top: -1px;
+            left: -1px;
+            border-top: 2px solid red;
+            border-left: 2px solid red;
+            width: 0;
+            height: 0;
+            transition: all linear 1s;
+            visibility: hidden;
+        }
+        .inner:hover::before{
+            width: 100%;
+            visibility: visible;
+            height: 100%;
+        }
+        .inner::after{
+            position: absolute;
+            content: '';
+            bottom: -1px;
+            right: -1px;
+            border-bottom: 2px solid red;
+            border-right: 2px solid red;
+            width: 0;
+            visibility: hidden;
+            height: 0;
+            transition: all linear 1s;
+        }
+        .inner:hover::after{
+            visibility: visible;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="part">
+        <div class="inner">
+            <h3>Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem hic eaque, cum a blanditiis non.</p>
+        </div>
+        <div class="inner">
+            <h3>Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem hic eaque, cum a blanditiis non.</p>
+        </div>
+        <div class="inner">
+            <h3>Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem hic eaque, cum a blanditiis non.</p>
+        </div>
+    </div>
+    <a href="image2.jpg" class="img-popup">
+        <img src="image2.jpg" alt="" class="img-fluid">
+    </a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde beatae porro, aliquam deleniti omnis dolores assumenda possimus facere, nam dignissimos voluptates mollitia perspiciatis dicta exercitationem, quaerat neque ea tempora explicabo. Repellendus labore minima placeat hic odit doloremque? Placeat soluta et nemo aspernatur labore facilis ut voluptatum deserunt deleniti ad, aliquid inventore quasi saepe at aut? Et consequuntur possimus, quisquam assumenda voluptatibus sequi. Veritatis fugit animi corrupti odio tenetur, fuga culpa consequuntur similique, omnis delectus perferendis facere necessitatibus amet soluta maxime sed architecto quaerat. Dolores voluptatum quis iste, similique eos ducimus nostrum voluptatibus dicta nulla nihil repellendus ab doloremque eveniet dolor voluptas deserunt. Illum mollitia dolore pariatur ipsa perferendis sint rerum maiores voluptatibus eius, officia voluptatem labore adipisci tempora aut quam repellendus odit delectus voluptate ullam doloremque tempore fugit quidem repellat! Delectus ipsum id, explicabo vitae dolorem nulla optio sequi laborum tenetur minus ex error nemo aperiam quidem! Id impedit sunt hic? Cumque, temporibus doloribus. Quaerat at quos, officia nemo deleniti sit ipsam omnis distinctio explicabo ducimus expedita velit tenetur. Modi, nisi. Reiciendis quo magni provident sit, quia facere quos aut odit consequatur consequuntur eius perferendis ullam culpa minus. Temporibus, minima necessitatibus deserunt ex perferendis numquam quis amet minus nisi neque et quos pariatur velit adipisci! Id qui nam labore perferendis sit harum natus optio minus cupiditate, sunt facere deleniti necessitatibus ea sapiente quam modi dolorem dolorum cumque illo nemo odit, fugit fugiat nesciunt. Doloremque repudiandae quibusdam fuga nulla rem, delectus reiciendis obcaecati. Sapiente labore alias odit voluptatum voluptas excepturi aspernatur neque quo facere vel adipisci velit ut animi accusantium deserunt aut omnis quidem veniam optio, ducimus error iusto aperiam? Architecto accusantium impedit maiores saepe, vitae laborum mollitia repellendus fugit quas animi sapiente, laudantium quis consectetur quasi minus labore ad cumque quam dolorem quaerat ut optio fuga. Excepturi voluptates in, non nostrum nam ad ullam, iure modi, odit similique mollitia possimus? Voluptatibus fuga autem voluptates harum exercitationem commodi quis numquam quo sapiente suscipit repellat debitis odit esse illo, quidem impedit delectus praesentium consectetur architecto ab corporis rem facere ex. Modi sunt sint illo, fugit numquam ipsa, consectetur velit dolor nobis quidem repellat omnis beatae repellendus libero asperiores possimus, excepturi ad? Deserunt beatae ab ex officia animi ipsam recusandae quae. Nesciunt maiores iure praesentium tempore quas blanditiis perferendis veniam sequi ad. Et sapiente ut iure odit eius libero impedit saepe sit harum molestiae doloribus, totam autem possimus quisquam dolorum facilis iusto quasi. Dolorem tempora suscipit maxime sunt culpa voluptates soluta, repudiandae ducimus fugiat ut!</p>
+    <div class="gallery">
+        <a href="1 (1).jpg"><img src="1 (1).jpg" alt="" class="img-fluid"></a>
+        <a href="1 (2).jpg"><img src="1 (2).jpg" alt="" class="img-fluid"></a>
+        <a href="1 (3).jpg"><img src="1 (3).jpg" alt="" class="img-fluid"></a>
+        <a href="1 (4).jpg"><img src="1 (4).jpg" alt="" class="img-fluid"></a>
+        <a href="1 (5).jpg"><img src="1 (5).jpg" alt="" class="img-fluid"></a>
+    </div>
+
+    <div class="product-carousel">
+        <div class="product-carousel exzoom" id="exzoom">
+            <!-- Images -->
+            <div class="exzoom_img_box">
+              <ul class='exzoom_img_ul'>
+                <li><img src="1 (1).jpg" alt="" class="img-fluid"></li>
+                <li><img src="1 (2).jpg" alt="" class="img-fluid"></li>
+                <li><img src="1 (3).jpg" alt="" class="img-fluid"></li>
+                <li><img src="1 (4).jpg" alt="" class="img-fluid"></li>
+              </ul>
+            </div>
+            <!-- <a href="https://www.jqueryscript.net/tags.php?/Thumbnail/">Thumbnail</a> Nav-->
+            <div class="exzoom_nav"></div>
+            <!-- Nav Buttons -->
+            <p class="exzoom_btn">
+                
+            </p>
+          </div>
+    </div>
+    
+
+    <button id="buttton">POPUP</button>
+
+    <a  href="https://www.youtube.com/watch?v=oalRVYGbbhw" id="iframe">You Tube Video</a>
+    <script src="jquery2.2.4.min.js"></script>
+    <script src="jquery.exzoom.js"></script>
+    <script src="jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.img-popup').magnificPopup({type:'image'});
+
+            $('.gallery').magnificPopup({
+                type:'image',
+                delegate: 'a',
+                gallery:{
+                    enabled:true
+                }
+            });
+
+
+            // Example with single object
+            // $('#button').magnificPopup({
+            //     items: {
+            //     src: '1 (5).jpg.jpg'
+            //     },
+            //     type: 'image' // this is default type
+            // });
+
+
+            
+            $('#iframe').magnificPopup({
+                type:'iframe',
+
+                iframe: {
+                 markup: '<div class="mfp-iframe-scaler">'+
+                    '<div class="mfp-close"></div>'+
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                    '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+            patterns: {
+                youtube: {
+                index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+                id: 'v=', // String that splits URL in a two parts, second part should be %id%
+                // Or null - full URL will be returned
+                // Or a function that should return %id%, for example:
+                // id: function(url) { return 'parsed id'; }
+
+                src: 'https://www.youtube.com/embed/oalRVYGbbhw' // URL that will be set as a source for iframe.
+                }
+
+            },
+
+            srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+            }
+            });
+
+
+            $(function(){
+
+                $("#exzoom").exzoom({
+
+                // thumbnail nav options
+                "navWidth": 100,
+                "navHeight": 60,
+                "navItemNum": 5,
+                "navItemMargin": 7,
+                "navBorder": 1,
+
+                // autoplay
+                "autoPlay": false,
+
+                // autoplay interval in milliseconds
+                "autoPlayTimeout": 2000
+                
+                });
+
+            });
+
+        });
+    </script>
+</body>
+</html>
